@@ -14,6 +14,9 @@
 
         h1 {
             color: #007BFF;
+            font-size: 36px;
+            /* put the name in the middle of the page */
+            text-align: center;
         }
 
         h2 {
@@ -36,6 +39,19 @@
         .main-content {
             max-width: 800px;
             margin: 0 auto;
+        }
+        .skills ul {
+        list-style: none;
+        padding: 0;
+        }
+
+        .skills li {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background-color: #f0f0f0; /* Light gray background */
+        padding: 8px 12px;
+        border-radius: 5px;
         }
     </style>
 </head>
@@ -86,11 +102,10 @@
             provided 94.5% accuracy for three classes of classification.</li>
         <li>Developed a hybrid technique to optimize CNN (Xception, InceptionV3) features with classical data optimization techniques for lesion 
             classification. 91% of accuracy is achieved for lesion classification for this system.</li>
-        <li>Feature extraction, optimization, and data evaluation:
-            o Applied a random projection algorithm to optimize the machine learning model for breast lesion classification. An overall AUC value of 0.84 showed the effectiveness of my method.
-            o Proposing data regeneration as an optimal way to reduce redundancy of features for breast mass classification and predicting the likelihood of malignant cases. 
-            o Developed and assessed a new global mammographic image feature analysis scheme to predict the likelihood of malignant cases. The algorithm provided 92% of accuracy for malignant analysis.
-            </li>
+        <li>Feature extraction, optimization, and data evaluation:</li>
+        <li>o Applied a random projection algorithm to optimize the machine learning model for breast lesion classification. An overall AUC value of 0.84 showed the effectiveness of my method.</li>
+        <li>o Proposing data regeneration as an optimal way to reduce redundancy of features for breast mass classification and predicting the likelihood of malignant cases. </li>
+        <li>o Developed and assessed a new global mammographic image feature analysis scheme to predict the likelihood of malignant cases. The algorithm provided 92% of accuracy for malignant analysis.</li>
         <li>Designed a bilateral scheme to mimic radiologists' vision system to predict risk score of the likelihood of cancer in breast images. The algorithm showed a 9.7% improvement in risk prediction accuracy in comparison with the baseline.  </li>
         <li>Designed a machine learning-based algorithm for Speech segmentation and enhancement to detach vowels and consonants and prepare them for steganography systems.</li>
         <li>Developed an algorithm for image steganalysis based on frequency domain features and machine learning algorithms.</li>
