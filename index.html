@@ -118,26 +118,29 @@
         /* New styles for box plot */
     .box-plot {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
         margin: 20px;
     }
 
     .box {
         position: relative;
         width: 200px;
-        background-color: #f0f0f0;
+        background-color: #ddd; /* Light gray background for boxes */
         border-radius: 5px;
+        margin-bottom: 20px;
         padding: 10px;
         text-align: center;
+        color: #37178f; /* Dark text color for better visibility */
     }
 
     .connector {
         position: absolute;
-        top: 50%;
-        left: 100%;
-        width: 20px;
-        height: 2px;
-        background-color: #333;
+        top: 100%;
+        left: 50%;
+        width: 2px;
+        height: 20px;
+        background-color: #39b21b; /* Dark connector color */
     }
     </style>
 </head>
@@ -296,6 +299,7 @@
             <p>Imaging Scientist II | Philips Pharma Solutions | Rochester, NY, USA | 06/2021 – Now</p>
         </div>
     </div>
+
 
 </body>
 </html>
