@@ -1,452 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="AI and Deep Learning Scientist - Résumé for Morteza Heidari" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Morteza Heidari - Resume</title>
-  <!-- Google Font Import -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
-    /* Base resets and body styling */
+    /* Basic Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
-      font-family: 'Open Sans', Arial, sans-serif;
-      background-color: #333;
-      color: #f5f5f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
       line-height: 1.6;
-      margin: 0;
-      position: relative;
+      padding: 20px;
     }
-
-    /* Sticky navigation bar */
-    .navbar {
-      position: sticky;
-      top: 0;
-      background-color: #444;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      z-index: 999;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    }
-
-    .navbar a {
-      color: #f5f5f5;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .navbar a:hover {
-      color: #0fc451;
-    }
-
-    /* Container to center content on wider screens */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px 20px 80px; /* Extra bottom padding for scroll-to-top button */
-    }
-
-    /* Header section */
     header {
       text-align: center;
-      margin-bottom: 20px;
-      position: relative;
-    }
-
-    header h1 {
-      color: #007BFF;
-      font-size: 2.5rem;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      font-size: 1rem;
-    }
-
-    /* Profile image */
-    .profile-image {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-
-    /* Common section styling */
-    section {
-      margin-bottom: 40px;
-    }
-
-    .section-title {
-      color: #0062cc;
-      font-size: 1.5rem;
-      margin: 30px 0 10px;
-      padding-bottom: 5px;
-      border-bottom: 2px solid #0062cc;
-    }
-
-    /* Content spacing */
-    section p,
-    section ul {
-      margin-left: 20px;
-      margin-bottom: 15px;
-    }
-
-    section ul li {
-      margin-bottom: 5px;
-    }
-
-    /* Sub-headers (Experience, etc.) */
-    h3 {
-      color: #0fc451;
-      margin-left: 20px;
-      margin-top: 20px;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    /* Skills styling */
-    .skills-list {
-      list-style: none;
-      padding: 0;
-      margin-left: 20px;
-    }
-
-    .skills-list li {
-      margin-bottom: 20px;
-    }
-
-    .skill-label {
+      padding: 20px 0;
       background-color: #007BFF;
-      color: #2b2727;
-      padding: 8px 12px;
-      border-radius: 5px;
-      display: inline-block;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .sidebar {
+      border-right: 2px solid #007BFF;
+      padding-right: 20px;
+    }
+    .sidebar img {
+      width: 100%;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .sidebar h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+    .sidebar ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    .content section {
+      margin-bottom: 30px;
+    }
+    .content section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #007BFF;
+      padding-bottom: 5px;
+      color: #007BFF;
+    }
+    .content section p {
+      margin-bottom: 10px;
+    }
+    .experience, .education {
+      margin-bottom: 20px;
+    }
+    .experience h3, .education h3 {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      color: #0056b3;
+    }
+    .experience p, .education p {
       margin-bottom: 5px;
     }
-
-    .bar-container {
-      width: 100%;
-      background-color: #444;
-      border-radius: 5px;
-      overflow: hidden;
-      margin-top: 5px;
-      /* transition for animation effect */
-      transition: background-color 0.3s;
+    @media(max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        border-right: none;
+        border-bottom: 2px solid #007BFF;
+        padding-right: 0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
     }
-
-    .bar {
-      height: 20px;
-      line-height: 20px;
+    footer {
       text-align: center;
-      color: #fff;
-      background-color: #0fc451;
-      /* animate skill bar fill */
-      transition: width 1s ease-in-out;
-    }
-
-    /* Hover effect for skill container (optional) */
-    .bar-container:hover {
-      background-color: #555;
-    }
-
-    /* Link styling */
-    a {
-      color: #0fc451;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    a:hover {
-      color: #00a851;
-    }
-
-    /* Scroll-to-top button */
-    .scroll-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #0fc451;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 10px 15px;
-      cursor: pointer;
-      font-size: 14px;
-      display: none; /* Hidden by default; shown with JS */
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-      transition: background-color 0.3s;
-    }
-    .scroll-to-top:hover {
-      background-color: #009b3f;
-    }
-
-    /* Responsive design adjustments */
-    @media (max-width: 768px) {
-      .profile-image {
-        position: static;
-        display: block;
-        margin: 0 auto 20px auto;
-      }
-      .navbar {
-        flex-wrap: wrap;
-      }
-      .navbar a {
-        margin: 5px;
-      }
-      .section-title {
-        font-size: 1.25rem;
-      }
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
-
-  <!-- Sticky Navbar -->
-  <nav class="navbar">
-    <a href="#summary">Summary</a>
-    <a href="#skills">Skills</a>
-    <a href="#proficiency">Proficiency</a>
-    <a href="#experience">Experience</a>
-    <a href="#publications">Publications</a>
-    <a href="#education">Education</a>
-    <a href="#accomplishments">Accomplishments</a>
-  </nav>
-
-  <img
-    class="profile-image"
-    src="https://raw.githubusercontent.com/morteza89/morteza89.github.io/main/img/51894034.jfif"
-    alt="Portrait of Morteza Heidari"
-    loading="lazy"
-  />
-
+  <header>
+    <h1>Morteza Heidari</h1>
+    <p>Staff Machine Learning Engineer | AI & Deep Learning Specialist</p>
+  </header>
   <div class="container">
-    <header>
-      <h1>Morteza Heidari</h1>
-      <p>NY, USA | m67.heidari [AT] gmail.com</p>
-    </header>
-
-    <!-- FIND ME -->
-    <section>
-      <h2 class="section-title">Find Me</h2>
+    <div class="sidebar">
+      <img src="https://raw.githubusercontent.com/morteza89/morteza89.github.io/main/img/51894034.jfif" alt="Morteza Heidari">
+      <h2>Contact</h2>
       <ul>
+        <li>NY, USA</li>
+        <li><a href="mailto:m67.heidari@gmail.com">m67.heidari@gmail.com</a></li>
         <li><a href="https://www.linkedin.com/in/mortezaheidari" target="_blank">LinkedIn</a></li>
-        <li><a href="https://scholar.google.com/citations?user=DKrATjMAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
         <li><a href="https://github.com/morteza89" target="_blank">GitHub</a></li>
-        <li><a href="https://x.com/MortezaHeidarii" target="_blank">X (Twitter)</a></li>
       </ul>
-    </section>
-
-    <!-- PROFESSIONAL SUMMARY -->
-    <section id="summary">
-      <h2 class="section-title">Professional Summary</h2>
-      <p>
-        AI and Deep Learning Scientist with over 9 years of expertise in developing
-        state-of-the-art AI models, computer vision, and natural language processing (NLP)
-        solutions. Proficient in designing and optimizing deep learning architectures, including
-        transformers, convolutional neural networks (CNNs), and large language models (LLMs).
-        Strong background in image processing, data analysis, and model optimization techniques
-        such as LoRA, GPTQ, and quantization. Extensive experience in accelerating inference on
-        AI-enabled hardware, optimizing time and space efficiency for model deployment. A
-        results-driven leader with a proven track record of innovation, delivering high-impact AI
-        solutions for healthcare, semiconductor industries, and real-time applications. Adept at
-        collaborating with cross-functional teams, mentoring junior engineers, and driving AI
-        research into scalable, production-ready applications.
-      </p>
-    </section>
-
-    <!-- KEY SKILLS -->
-    <section id="skills">
-      <h2 class="section-title">Key Skills</h2>
+      <h2>Skills</h2>
       <ul>
-        <li><strong>Programming Languages:</strong> Python, MATLAB, C, C++.</li>
-        <li><strong>Data Science Tools:</strong> TensorFlow, Keras, PyTorch, Scikit-Learn, Pandas, SciPy.</li>
-        <li><strong>Deep Learning:</strong> CNNs, GANs, VAE, Transformers, VIT, Diffusion, SETR, PVT,
-          SegNet, UNET, RCNN, BERT, GPT series, LLMs, MLLMs.</li>
-        <li><strong>Machine Learning:</strong> KNN, SVM, Naive Bayes, Decision Tree, GLM, Random Forest.</li>
-        <li><strong>Computer Vision:</strong> Scikit-image, OpenCV, Pillow, ITK, Imageio, MATLAB toolboxes.</li>
-        <li><strong>NLP:</strong> Text analysis, sentiment analysis, language modeling, information extraction.</li>
-        <li><strong>Model Optimization:</strong> LoRA, GPTQ, AWQ, Pruning, Quantization, (Optimum, Neural Compressor, ONNX, OPENVINO).</li>
+        <li>Python, MATLAB, C/C++</li>
+        <li>TensorFlow, PyTorch, Keras</li>
+        <li>Deep Learning & NLP</li>
+        <li>Computer Vision</li>
+        <li>Model Optimization & Quantization</li>
+        <li>MLOps & Deployment</li>
       </ul>
-    </section>
-
-    <!-- SKILLS PROFICIENCY -->
-    <section id="proficiency">
-      <h2 class="section-title">Skills Proficiency</h2>
-      <ul class="skills-list">
-        <li>
-          <span class="skill-label">Python</span>
-          <div class="bar-container">
-            <div class="bar" style="width: 100%">100%</div>
-          </div>
-        </li>
-        <li>
-          <span class="skill-label">PyTorch</span>
-          <div class="bar-container">
-            <div class="bar" style="width: 80%">80%</div>
-          </div>
-        </li>
-        <li>
-          <span class="skill-label">Deep Learning</span>
-          <div class="bar-container">
-            <div class="bar" style="width: 90%">90%</div>
-          </div>
-        </li>
-        <li>
-          <span class="skill-label">Machine Learning</span>
-          <div class="bar-container">
-            <div class="bar" style="width: 85%">85%</div>
-          </div>
-        </li>
-        <li>
-          <span class="skill-label">Computer Vision</span>
-          <div class="bar-container">
-            <div class="bar" style="width: 90%">90%</div>
-          </div>
-        </li>
-        <li>
-          <span class="skill-label">NLP</span>
-          <div class="bar-container">
-            <div class="bar" style="width: 70%">70%</div>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- PROFESSIONAL EXPERIENCE -->
-    <section id="experience">
-      <h2 class="section-title">Professional Experience</h2>
-      <h3>Staff Machine Learning Engineer, Intel Corporation | Folsom, CA | 05/2024 – Present</h3>
-      <ul>
-        <li>Implementing and designing attention-based or transformer-based modeling (e.g., state-of-the-art 
-                NLP and Vision models or any other sequence-to-sequence-based deep learning models).</li>
-        <li>Optimizing large language models (LLMs) for deployment, focusing on time and space efficiency.</li>
-        <li>Developed transformer-based video sign language translation models that convert sign language video frames
-             into American Sign Language labels, followed by a fine-tuned and quantized LLM to generate English text in real-time.</li>
-        <li>Designed and implemented a novel algorithm that reduced LLM model size by over 200%, exceeding the original
-             goal of 10%, enabling significant efficiency improvements in model deployment.</li>
-        <li>Pioneered a latency-reduction technique that cut LLM inference time on CPU by over 25%, tripling the initial
-             goal of 5%, facilitating faster real-time applications.</li>
-        <li><strong>Leadership:</strong> Designed tasks for junior engineers on ML/Software optimizations, defining performance metrics,
-             and benchmarking algorithms.</li>
-        <li><strong>Tech Lead:</strong> Leading an ISV in designing and developing a deployment framework for Mixtral-8x7 on AI-enabled PCs.</li>
-        <li>Leading multiple ISVs in enabling AI features on inference phase for AI PCs and edge devices.</li>
-      </ul>
-
-      <h3>Imaging Scientist II, Philips Pharma Solutions | Rochester, NY | 05/2021 – 05/2024</h3>
-      <ul>
-        <li>Developer: Design computer vision and deep learning methods to develop algorithms for 3D stitching, regression, 
-            classification, out-painting, registration, segmentation, super-resolution, parameter estimation, etc. </li>
-        <li>Developing an Image generation algorithm to reconstruct the full leg and calculate knee angle with robust 
-            results for the Philips for the first time.</li>
-        <li>Developing 3D image alignment to align 3D MRI images and reduce the cost of redoing MRI images.</li>
-        <li>Developing a pipeline for loading datasets, categorizing them, and stitching the related ones. Applicable to 
-            reduce data loading time for the company from 2 hours to 10 minutes.</li>
-        <li>Designed advanced NLP models for text classification, sentiment analysis, and language generation tasks.</li>
-        <li>Implemented and fine-tuned Large Language Models (LLMs) for complex language understanding and generation problems.</li>
-        <li>Researcher: Research and develop new algorithms for image processing, computer vision, and deep learning.</li>
-        <li>Tech Lead: MRI and CT Imaging evaluation.</li>
-      </ul>
-
-      <h3>Medical Imaging Analytical Intern, Siemens Healthineers | Malvern, PA | 06/2019 – 08/2019</h3>
-      <ul>
-        <li>Development and assessment of a new deep learning algorithm to classify different views of echocardiogram imaging with 95% classification accuracy.
-        <li>Presenting image processing tools to prepare the dataset for the purpose of classification.</li>
-        <li>Analyzing and proposing the best deep learning algorithm effective for this task.</li>
-      </ul>
-
-      <h3>Research Assistant & Software Developer, University of Oklahoma | Norman, OK | 01/2017 – 05/2021</h3>
-      <ul>
-        <li>Published 13+ papers in top-tier journals in machine learning, deep learning, artificial intelligence, medical imaging, and data science.</li>
-        <li>Developed deep learning model to predict the likelihood of COVID-19 using chest X-ray images with preprocessing algorithms. The system 
-            provided 94.5% accuracy for three classes of classification.</li>
-        <li>Developed a hybrid technique to optimize CNN (Xception, InceptionV3) features with classical data optimization techniques for lesion 
-            classification. 91% of accuracy is achieved for lesion classification for this system.</li>
-        <li>Feature extraction, optimization, and data evaluation:</li>
-        <li>Applied a random projection algorithm to optimize the machine learning model for breast lesion classification. 
-            An overall AUC value of 0.84 showed the effectiveness of my method.</li>
-        <li>Proposing data regeneration as an optimal way to reduce redundancy of features for breast mass classification 
-            and predicting the likelihood of malignant cases. </li>
-        <li>Developed and assessed a new global mammographic image feature analysis scheme to predict the likelihood of malignant cases. 
-            The algorithm provided 92% of accuracy for malignant analysis.</li>
-        <li>Designed a bilateral scheme to mimic radiologists' vision system to predict risk score of the likelihood of cancer in breast images. 
-            The algorithm showed a 9.7% improvement in risk prediction accuracy in comparison with the baseline.  </li>
-        <li>Designed a machine learning-based algorithm for Speech segmentation and enhancement to detach vowels and consonants 
-            and prepare them for steganography systems.</li>
-        <li>Developed an algorithm for image steganalysis based on frequency domain features and machine learning algorithms.</li>
-      </ul>
-    </section>
-
-    <!-- SELECTED PUBLICATIONS -->
-    <section id="publications">
-      <h2 class="section-title">Selected Publications</h2>
-      <ul>
-        <li>Improving the performance of CNN to predict the likelihood of COVID-19 using chest X-ray images with preprocessing algorithms. 
-            <span style="font-style: italic;">International journal of medical informatics, 2021</span></li>
-        <li>Applying a random projection algorithm to optimize machine learning model for breast lesion classification. 
-            <span style="font-style: italic;">IEEE Transactions on Biomedical Engineering. 2021</span></li>
-        <li>Development and assessment of a new global mammographic image feature analysis scheme to predict likelihood of malignant cases. 
-            <span style="font-style: italic;">IEEE transactions on medical imaging. 2019</span></li>
-        <li>DevelPrediction of breast cancer risk using a machine learning approach embedded with a locality preserving projection algorithm. 
-            <span style="font-style: italic;">Physics in Medicine & Biology 2018</span></li>
-      </ul>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education">
-      <h2 class="section-title">Education</h2>
-      <ul>
-        <li>Ph.D. | University of Oklahoma, Electrical & Computer Engineering, 2021</li>
-        <li>M.Sc. | Sharif University of Technology, Electrical & Computer Engineering, 2013</li>
-        <li>B.Sc. | Isfahan University of Technology, Electrical & Computer Engineering, 2011</li>
-      </ul>
-    </section>
-
-    <!-- ACCOMPLISHMENTS -->
-    <section id="accomplishments">
-      <h2 class="section-title">Accomplishments</h2>
-      <ul>
-        <li>Student member in ECE faculty search committee at OU, 2021</li>
-        <li>Gallogly College of Engineering Dissertation Excellence Award (DEA), 2020</li>
-        <li>40+ published papers and 1100+ citations on Google Scholar</li>
-        <li>Robert F. Wagner Best Student Paper Award at SPIE Medical Imaging, 2018</li>
-      </ul>
-    </section>
+    </div>
+    <div class="content">
+      <section class="summary">
+        <h2>Professional Summary</h2>
+        <p>Experienced AI and Deep Learning Scientist with over 9 years of expertise in developing state-of-the-art machine learning models, computer vision, and natural language processing solutions. Proven track record in designing and optimizing deep learning architectures for production environments, accelerating inference, and enhancing model performance. Adept at collaborating across teams and mentoring junior engineers to drive innovation in AI.</p>
+      </section>
+      <section class="experience">
+        <h2>Professional Experience</h2>
+        <h3>Staff Machine Learning Engineer, Intel Corporation</h3>
+        <p><em>Folsom, CA, USA | May 2024 – Present</em></p>
+        <p>Leading the design and optimization of transformer-based and attention-based models for AI-enabled applications. Spearheading initiatives to improve model efficiency and scalability across multiple platforms.</p>
+        
+        <h3>Imaging Scientist II, Philips Pharma Solutions</h3>
+        <p><em>Rochester, NY, USA | May 2021 – May 2024</em></p>
+        <p>Developed computer vision and deep learning algorithms for medical imaging and 3D reconstruction. Enhanced data pipelines and reduced processing times through innovative algorithm design.</p>
+        
+        <h3>Medical Imaging Analytical Intern, Siemens Healthineers</h3>
+        <p><em>Malvern, PA, USA | June 2019 – August 2019</em></p>
+        <p>Assisted in developing and validating deep learning models for echocardiogram analysis. Contributed to the improvement of image processing tools and data preparation techniques.</p>
+        
+        <h3>Research Assistant & Software Developer, University of Oklahoma</h3>
+        <p><em>Norman, OK, USA | January 2017 – May 2021</em></p>
+        <p>Published over 13 papers in peer-reviewed journals. Developed hybrid techniques for optimizing CNN features and implemented models for medical image analysis, including COVID-19 detection using chest X-rays.</p>
+      </section>
+      <section class="education">
+        <h2>Education</h2>
+        <h3>Ph.D. in Electrical and Computer Engineering</h3>
+        <p><em>University of Oklahoma, 2021</em></p>
+        
+        <h3>M.Sc. in Electrical and Computer Engineering</h3>
+        <p><em>Sharif University of Technology, 2013</em></p>
+        
+        <h3>B.Sc. in Electrical and Computer Engineering</h3>
+        <p><em>Isfahan University of Technology, 2011</em></p>
+      </section>
+      <section class="publications">
+        <h2>Selected Publications</h2>
+        <ul>
+          <li>"Improving the Performance of CNNs for COVID-19 Detection Using Chest X-Ray Images" – International Journal of Medical Informatics, 2021</li>
+          <li>"Optimizing Machine Learning Models for Breast Lesion Classification" – IEEE Transactions on Biomedical Engineering, 2021</li>
+          <li>"Global Mammographic Image Feature Analysis for Malignant Case Prediction" – IEEE Transactions on Medical Imaging, 2019</li>
+          <li>"Prediction of Breast Cancer Risk Using a Locality Preserving Projection Algorithm" – Physics in Medicine & Biology, 2018</li>
+        </ul>
+      </section>
+    </div>
   </div>
-
-  <!-- Scroll-to-top button -->
-  <button class="scroll-to-top" id="scrollBtn">Top</button>
-
-  <script>
-    // Show scroll-to-top button when user scrolls down
-    const scrollBtn = document.getElementById('scrollBtn');
-    window.onscroll = function() {
-      if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
-        scrollBtn.style.display = "block";
-      } else {
-        scrollBtn.style.display = "none";
-      }
-    };
-
-    // Smoothly scroll to top
-    scrollBtn.onclick = function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    };
-  </script>
-
+  <footer>
+    <p>&copy; 2025 Morteza Heidari. All rights reserved.</p>
+  </footer>
 </body>
 </html>
